@@ -1,0 +1,4 @@
+allure-pytest
+pytest
+pytest-rerunfailures
+selenium

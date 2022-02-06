@@ -84,7 +84,7 @@ class ElementsHelper:
         WebDriverWait(wd, 5).until(
           EC.visibility_of_element_located((By.CSS_SELECTOR, "%s" % css_locator)))
         element = wd.find_element(By.CSS_SELECTOR, "%s" % css_locator).text
-        assert element == namefield, f"Ожидаемый результат = {namefield}, Фактический = {element}"
+        assert element == str(namefield), f"Ожидаемый результат = {namefield}, Фактический = {element}"
 
     #  Проверка имени поля по xpath
     def assert_field_name_xpath(self, css_locator, namefield):
@@ -100,7 +100,7 @@ class ElementsHelper:
         field_value = WebDriverWait(wd, 5).until(
             EC.visibility_of_element_located((By.CSS_SELECTOR, "%s" % field_locator)))
         assert field_value.get_attribute(
-            "value") == testdata, f"Ожидаемый результат = {testdata}, Фактический = {field_value.get_attribute('value')}"
+            "value") == testdata, f"Ожидаемый результат = {testdata}, Фактический = {field_value.get_attribute('value')}("
 
     def assert_element_xpath(self, field_locator, testdata):
         wd = self.app.wd

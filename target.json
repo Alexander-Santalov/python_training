@@ -1,6 +1,6 @@
 {
   "web": {
-    "baseUrl": "http://localhost/addressbook/"
+    "baseUrl": "http://192.168.43.216/addressbook/"
   },
   "webadmin": {
     "username": "admin",
